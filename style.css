@@ -1,0 +1,296 @@
+body {
+  margin: 0;
+  background: #181818;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 400;
+  color: #b4b6ba;
+  font-style: normal;
+}
+
+h2 {
+  color: white;
+  width: 100%;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.logo-box {
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  background: url(https://cdn.freebiesupply.com/logos/large/2x/movie-city-1-logo-black-and-white.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-indent: 10000%;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 1em;
+}
+
+.logo:hover {
+  cursor: pointer;
+}
+
+.content {
+  /*background-image: url(https://gallery.yopriceville.com/var/resizes/Backgrounds/Cinema_Background.jpg?m=1399672800);*/
+  padding-top: 6em;
+  background-blend-mode: multiply;
+  display: grid;
+  place-items: center;
+  background-size: contain;
+}
+
+header {
+  background: #202020;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+}
+
+/*Nav Bar*/
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  background: white;
+  display: block;
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: "";
+  position: absolute;
+}
+
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+  top: 7px;
+}
+
+nav {
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  background: #242424;
+  width: 100%;
+  transform-origin: top;
+  transform: scale(1, 0);
+  transition: transform 400ms ease-in-out;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
+nav ul li a {
+  color: crimson;
+  text-decoration: none;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+
+nav a:hover {
+  color: #552ec0;
+}
+
+nav a:active {
+  color: crimson;
+}
+
+.nav-toggle:checked ~ nav {
+  transform: scale(1, 1);
+}
+
+.nav-toggle:checked ~ nav a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+/*Footer*/
+
+footer {
+  background: #202020;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+ul li {
+  list-style: none;
+}
+
+footer ul {
+  padding: 0;
+}
+
+.social img {
+  max-width: 2.5em;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+footer a:hover {
+  color: #552ec0;
+}
+
+/*Content*/
+
+.movies {
+  font-weight: bold;
+}
+
+.movie {
+  display: flex;
+  background: #2b2b2b;
+  margin: 0.5rem;
+  border-radius: 1rem;
+  max-width: 500px;
+  margin: 10px auto;
+}
+
+.movie p:hover {
+  color: blue;
+  cursor: pointer;
+}
+
+.movies img {
+  width: 8em;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-toggle-label {
+    display: none;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 1fr) 1fr;
+  }
+
+  .logo {
+    grid-column: 1 / span 1;
+  }
+
+  nav {
+    all: unset;
+    grid-column: 3/-1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  nav li {
+    margin-left: 0.5em;
+    margin-bottom: 0;
+    margin-right: 1em;
+  }
+
+  nav ul li a {
+    opacity: 1;
+    position: relative;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  nav a::before {
+    content: "";
+    display: block;
+    height: 5px;
+    background: crimson;
+    position: absolute;
+    bottom: -0.75em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transform-origin: left;
+    transition: transform ease-in-out 250ms;
+  }
+
+  nav a:hover::before {
+    transform: scale(1, 1);
+  }
+
+  /*Footer*/
+
+  .footer-content {
+    display: flex;
+    width: 100%;
+  }
+
+  .footer-content li a {
+    padding: 1em;
+  }
+
+  .social {
+    display: flex;
+    width: 30%;
+    justify-content: center;
+  }
+
+  .social img {
+    margin: 0 2px;
+  }
+
+  .social img:hover {
+    cursor: pointer;
+  }
+
+  /*content*/
+
+  .movies {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .movie img {
+    width: 20em;
+    margin: 0 auto;
+  }
+
+  .movie {
+    flex-direction: column;
+    flex: 1 1 30%;
+    background: none;
+    background: #2b2b2b;
+    margin: 1em;
+    text-align: center;
+  }
+}
