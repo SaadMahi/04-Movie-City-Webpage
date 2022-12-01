@@ -20,7 +20,7 @@ h2 {
 
 .logo {
   background: url(https://cdn.freebiesupply.com/logos/large/2x/movie-city-1-logo-black-and-white.png);
-  background-size: cover;
+  background-size: 2em;
   background-repeat: no-repeat;
   text-indent: 10000%;
   margin-top: 0;
