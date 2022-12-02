@@ -22,7 +22,9 @@ h2 {
   background: url(https://cdn.freebiesupply.com/logos/large/2x/movie-city-1-logo-black-and-white.png);
   background-size: 2em;
   background-repeat: no-repeat;
+  
   text-indent: 10000%;
+  
   margin-top: 0;
   margin-bottom: 0;
   padding-bottom: 1em;
@@ -59,6 +61,7 @@ header {
   left: 0;
   margin-left: 1em;
   height: 100%;
+  
   display: flex;
   align-items: center;
 }
@@ -68,9 +71,11 @@ header {
 .nav-toggle-label span::after {
   background: white;
   display: block;
+  
   height: 2px;
   width: 2em;
   border-radius: 2px;
+  
   position: relative;
 }
 
@@ -93,8 +98,10 @@ nav {
   text-align: left;
   top: 100%;
   left: 0;
+  
   background: #242424;
   width: 100%;
+  
   transform-origin: top;
   transform: scale(1, 0);
   transition: transform 400ms ease-in-out;
@@ -207,7 +214,9 @@ footer a:hover {
 
   nav {
     all: unset;
+    
     grid-column: 3/-1;
+    
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -233,11 +242,14 @@ footer a:hover {
     content: "";
     display: block;
     height: 5px;
+    
     background: crimson;
+    
     position: absolute;
     bottom: -0.75em;
     left: 0;
     right: 0;
+    
     transform: scale(0, 1);
     transform-origin: left;
     transition: transform ease-in-out 250ms;
